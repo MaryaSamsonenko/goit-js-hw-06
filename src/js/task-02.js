@@ -20,9 +20,6 @@
 
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
-// const liEl = document.createElement('li');
-// liEl.textContent = 'Potatoes';
-
 const ingredientsEl = document.querySelector('#ingredients');
 
 const arrayItemsEl = ingredients.map(ingredient => {
