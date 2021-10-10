@@ -32,6 +32,7 @@ button {
 
     margin-left: -32px;
     margin-top: -32px;
+    padding: 0;
 }
 .gallery-item {
     flex-basis: calc(100% / 3 - 32px);
