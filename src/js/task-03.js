@@ -23,11 +23,10 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 
-const arrayEl = images
-    .map(
-        image =>
-            `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`,
-    )
-    .join('');
-
+const arrayEl = images.reduce((acc, image) => {
+    return (
+        acc +
+        `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`
+    );
+}, '');
 galleryEl.insertAdjacentHTML('afterbegin', arrayEl);
