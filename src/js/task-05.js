@@ -11,3 +11,12 @@ inputEl.addEventListener('input', event => {
         nameInTitleEl.textContent = 'Anonymous';
     }
 });
+
+//============= Options 2 ======================
+
+// const inputEl = document.querySelector('#name-input');
+// const spanEl = document.querySelector('#name-output');
+// inputEl.addEventListener('input', getInputValue);
+// function getInputValue({ target: { value } }) {
+//     spanEl.textContent = value.trim() ? value : 'Anonimous';
+// }
