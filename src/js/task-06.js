@@ -22,6 +22,23 @@
 //   border-color: #f44336;
 // }
 
+// const inputEl = document.querySelector('#validation-input');
+// const inputAttributeEl = Number(inputEl.dataset.length);
+
+// inputEl.addEventListener('blur', onInputBlur);
+
+// function onInputBlur(event) {
+//     if (event.currentTarget.value.length === inputAttributeEl) {
+//         event.currentTarget.classList.add('valid');
+//         event.currentTarget.classList.remove('invalid');
+//     } else {
+//         event.currentTarget.classList.add('invalid');
+//         event.currentTarget.classList.remove('valid');
+//     }
+// }
+
+// ============= Option 2 ============
+
 const inputEl = document.querySelector('#validation-input');
 const inputAttributeEl = Number(inputEl.dataset.length);
 
@@ -29,9 +46,30 @@ inputEl.addEventListener('blur', onInputBlur);
 
 function onInputBlur(event) {
     if (event.currentTarget.value.length === inputAttributeEl) {
-        event.currentTarget.classList.add('valid');
-        event.currentTarget.classList.remove('invalid');
+        toggleClass('valid', 'invalid');
     } else {
-        event.currentTarget.classList.add('invalid');
+        toggleClass('invalid', 'valid');
     }
 }
+
+function toggleClass(add, remove) {
+    inputEl.classList.add(add);
+    inputEl.classList.remove(remove);
+}
+
+// ============= Option 3 ============
+
+// const inputEl = document.querySelector('#validation-input');
+
+// inputEl.addEventListener('blur', onInputBlur);
+
+// function onInputBlur({ target: { value, dataset } }) {
+//     value.length === Number(dataset.length)
+//         ? toggleClass('valid', 'invalid')
+//         : toggleClass('invalid', 'valid');
+// }
+
+// function toggleClass(add, remove) {
+//     inputEl.classList.add(add);
+//     inputEl.classList.remove(remove);
+// }
